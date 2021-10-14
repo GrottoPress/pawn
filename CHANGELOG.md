@@ -8,6 +8,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ## [Unreleased] - 
 
 ### Added
+- Add support for *Crystal* v1.2
 - Add support for *Crystal* v1.1
 
 ## [0.1.0] - 2021-08-27
