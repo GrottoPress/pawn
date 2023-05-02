@@ -7,8 +7,14 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 [Unreleased] - 
 
+### Changed
+- Bump minimum required Crystal version to 1.3
+
 ### Removed
 - Remove `GrottoPress/hapi` shard
+
+### Fixed
+- Fix linker error with OpenSSL 3.0
 
 ## [0.1.2] - 2022-02-26
 

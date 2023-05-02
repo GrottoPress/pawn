@@ -8,7 +8,7 @@ authors:
 
 license: MIT
 
-crystal: ~> 1.0
+crystal: ~> 1.3
 
 development_dependencies:
   ameba:
