@@ -1,13 +1,11 @@
 require "digest/sha1"
-require "hapi"
 
 require "./pawn/version"
 require "./pawn/**"
 
 class Pawn
-  include Hapi::Client
-
   def initialize(*, padding = false)
+    @http_client = HTTP::Client.new(self.class.uri)
     set_headers(padding)
   end
 
@@ -15,7 +13,7 @@ class Pawn
     digest = Digest::SHA1.hexdigest(password)
     first, last = digest[0, 5], digest[5..]
 
-    http_client.get("/range/#{first}") do |response|
+    @http_client.get("/range/#{first}") do |response|
       raise_if_failed(response)
 
       response.body_io
@@ -43,7 +41,7 @@ class Pawn
   end
 
   private def set_headers(padding)
-    http_client.before_request do |request|
+    @http_client.before_request do |request|
       set_user_agent(request.headers)
       set_padding(request.headers, padding)
     end
