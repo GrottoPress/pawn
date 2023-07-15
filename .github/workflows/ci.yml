@@ -55,6 +55,6 @@ jobs:
           key: ${{ runner.os }}-shards-${{ hashFiles('shard.yml') }}
           restore-keys: ${{ runner.os }}-shards-
       - name: Install shards
-        run: shards update
+        run: shards update --skip-postinstall --skip-executables
       - name: Run tests
         run: crystal spec --error-on-warnings
