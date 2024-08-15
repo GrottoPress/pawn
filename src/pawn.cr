@@ -1,4 +1,5 @@
 require "digest/sha1"
+require "http"
 
 require "./pawn/version"
 require "./pawn/**"
