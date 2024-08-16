@@ -18,8 +18,7 @@ class Pawn
       raise_if_failed(response)
 
       response.body_io
-        .gets_to_end
-        .lines
+        .each_line
         .find(&.downcase.starts_with? last)
         .try(&.split(':')[1]?.try &.to_i?) || 0
     end
