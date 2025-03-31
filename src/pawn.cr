@@ -4,7 +4,7 @@ require "http/client"
 require "./pawn/version"
 require "./pawn/**"
 
-class Pawn
+struct Pawn
   def initialize(*, padding = false)
     @http_client = HTTP::Client.new(self.class.uri)
     set_headers(padding)
