@@ -10,6 +10,9 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ### Changed
 - Convert `Pawn` into a `struct`
 
+### Fixed
+- Use the same `HTTP::Client` object for all `Pawn` instances
+
 ## [1.0.3] - 2024-08-16
 
 ### Fixed
