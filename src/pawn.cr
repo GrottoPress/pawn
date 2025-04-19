@@ -38,7 +38,7 @@ struct Pawn
   end
 
   def self.uri : URI
-    URI.parse("https://api.pwnedpasswords.com")
+    URI.parse("https://api.pwnedpasswords.com/")
   end
 
   private def set_headers(padding)
